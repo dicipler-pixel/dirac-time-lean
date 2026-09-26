@@ -12,8 +12,10 @@ Proved here:
 * Unitary covariance. Conjugating the projector and both tangents by a unitary leaves
   `Tr(V W)` and `Tr(P [V, W])` unchanged, so `g_P` and `Ω_P` are unitarily invariant.
 
-Not proved here: the block formulas `g = Re Tr(X Y†)`, `Ω = -2 Im Tr(X Y†)` and the
-metric-curvature inequality (items 2 and 3 of Theorem P1).
+* Metric–curvature inequality in block variables (item 3), from Cauchy–Schwarz.
+
+Not proved here: the identification of `g` and `Ω` with the block inner product,
+`g = Re Tr(X Y†)`, `Ω = -2 Im Tr(X Y†)` (item 2 of Theorem P1).
 -/
 import Mathlib
 
@@ -121,5 +123,38 @@ theorem curvature_unitary_invariant {U : Matrix n n ℂ} (hU : star U * U = 1)
     trace_conj hU]
 
 end Matrix
+
+/-! ## Metric–curvature inequality
+
+Write the off-diagonal blocks of two tangents as vectors `x, y` of a complex inner-product
+space (the Frobenius inner product on blocks). The metric reads the real part of `⟪x, y⟫`
+and the curvature form twice its imaginary part, `|Ω| = 2 |Im ⟪x, y⟫|`. The inequality below
+is item 3 of Theorem P1 in those variables; identifying `g` and `Ω` with the block inner
+product (item 2) is not formalized here. -/
+
+section CurvatureBound
+
+open scoped InnerProductSpace
+
+variable {E : Type*} [NormedAddCommGroup E] [InnerProductSpace ℂ E]
+
+/-- Cauchy–Schwarz split into real and imaginary parts. -/
+theorem re_sq_add_im_sq_le (x y : E) :
+    (⟪x, y⟫_ℂ).re ^ 2 + (⟪x, y⟫_ℂ).im ^ 2 ≤ ‖x‖ ^ 2 * ‖y‖ ^ 2 := by
+  have h := norm_inner_le_norm (𝕜 := ℂ) x y
+  have h2 : ‖⟪x, y⟫_ℂ‖ ^ 2 ≤ (‖x‖ * ‖y‖) ^ 2 := by gcongr
+  rw [Complex.sq_norm, Complex.normSq_apply, mul_pow] at h2
+  nlinarith [h2]
+
+/-- **Metric–curvature inequality** (Theorem P1, item 3):
+`|Ω| ≤ 2 √(g(V,V) g(W,W) − g(V,W)²)` in block variables. -/
+theorem metric_curvature_inequality (x y : E) :
+    |2 * (⟪x, y⟫_ℂ).im| ≤ 2 * Real.sqrt (‖x‖ ^ 2 * ‖y‖ ^ 2 - (⟪x, y⟫_ℂ).re ^ 2) := by
+  rw [abs_mul, abs_two]
+  gcongr
+  apply Real.abs_le_sqrt
+  linarith [re_sq_add_im_sq_le x y]
+
+end CurvatureBound
 
 end DiracTime.ProjectorTangent
