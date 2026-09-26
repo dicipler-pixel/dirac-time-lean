@@ -1,2 +1,6 @@
 import DiracTime.PredictiveQuotient
 import DiracTime.Headline
+import DiracTime.ProjectorTangent
+import DiracTime.WeakValue
+import DiracTime.PathLedger
+import DiracTime.FiniteReturn
