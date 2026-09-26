@@ -11,6 +11,8 @@
 | `DiracTime/EntropyLedger.lean` | Written for this repository from Theorem P6 and Corollary P6.1 (§D.6) | same |
 | `DiracTime/PhaseSilence.lean` | Written for this repository from §9.2 and Theorem 13.1 | same |
 | `DiracTime/MovingFrame.lean` | Written for this repository from §9.3 and programme item T4 | same |
+| `DiracTime/ProjectorBlocks.lean` | Written for this repository from Theorem P1, item 2 | same |
+| `DiracTime/CommonClock.lean` | Written for this repository from Corollaries P4.1–P4.3 | same |
 | `DiracTime/EqualEndpointWitness.lean` | Written for this repository from §11.4 | same |
 | `DiracTime/FrictionMetric.lean` | Written for this repository from §12.6 | same |
 | `DiracTime/SectorReduction.lean` | Written for this repository from §15.5 | same |
