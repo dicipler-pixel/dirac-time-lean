@@ -1,0 +1,28 @@
+{
+  "modules": [
+    {
+      "module": "ElementalFoundations",
+      "path": "ElementalFoundations.lean"
+    },
+    {
+      "module": "ElementalForceRecovery",
+      "path": "ElementalForceRecovery.lean"
+    },
+    {
+      "module": "ElementalBoundaryLedger",
+      "path": "ElementalBoundaryLedger.lean"
+    },
+    {
+      "module": "PauliMemory",
+      "path": "PauliMemory.lean"
+    }
+  ],
+  "expected_theorems": 66,
+  "expected_false_controls": 3,
+  "root_imports": [
+    "ElementalFoundations",
+    "ElementalForceRecovery",
+    "ElementalBoundaryLedger",
+    "PauliMemory"
+  ]
+}

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below."
+title: "Elemental Peeling and What the Boundary Retains: Lean proofs"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 1.0.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/dicipler-pixel/elemental-peeling-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - retained records
+  - boundary ledger
+  - exclusion
