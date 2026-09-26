@@ -42,7 +42,7 @@ theorem finite_return_iff [FiniteDimensional K V] (L : V →ₗ[K] V) (R : V →
   constructor
   · rintro ⟨n, hn⟩
     by_contra hcon
-    push_neg at hcon
+    push Not at hcon
     exact hn ((silent_forever_iff L R Δ).mpr hcon n)
   · rintro ⟨n, -, hn⟩
     exact ⟨n, hn⟩

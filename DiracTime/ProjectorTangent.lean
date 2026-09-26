@@ -69,6 +69,7 @@ section Matrix
 variable {n : Type*} [Fintype n] [DecidableEq n]
 
 open Matrix
+open scoped ComplexOrder
 
 /-- The trace form `Tr(V† V)` is strictly positive on every nonzero matrix. -/
 theorem trace_conjTranspose_mul_self_re_pos {V : Matrix n n ℂ} (hV : V ≠ 0) :
