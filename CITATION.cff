@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below."
+title: "The Ledger Outlives the Metric: Lean proofs"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 1.0.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/dicipler-pixel/gravity-ledger-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - projector geometry
+  - quantum metric
+  - overlap
+references:
+  - type: article
+    title: "The Ledger Outlives the Metric"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.22088625"
