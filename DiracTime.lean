@@ -7,4 +7,6 @@ import DiracTime.FiniteReturn
 import DiracTime.EqualEndpointWitness
 import DiracTime.PhaseSilence
 import DiracTime.MovingFrame
+import DiracTime.FrictionMetric
+import DiracTime.SectorReduction
 import DiracTime.Headline
