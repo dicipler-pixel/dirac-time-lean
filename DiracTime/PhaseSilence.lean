@@ -7,9 +7,9 @@ For an affine readout `x = A + B s`, `y = C + D s` the angular numerator
 is nonzero and the readout is silent when it vanishes.
 
 On the arc `(a, b)` of the torus knot `T(p, q)`, the boundary sector `(m, n)` with offsets
-`(ε_μ, ε_λ)` reads `x = m + ε_μ + α`, `y = n + ε_λ + a/2 − pq α`. Its numerator is
-`A D − B C = −(pq (m + ε_μ) + n + ε_λ + a/2)`, so a silent sector exists exactly when
-`pq ε_μ + ε_λ + a/2` is an integer.
+`(ε_m, ε_l)` reads `x = m + ε_m + α`, `y = n + ε_l + a/2 − pq α`. Its numerator is
+`A D − B C = −(pq (m + ε_m) + n + ε_l + a/2)`, so a silent sector exists exactly when
+`pq ε_m + ε_l + a/2` is an integer.
 
 At an end of the arc the index `k = u a q ± v b p`, with `u q ≡ 1 (mod p)` and
 `v p ≡ 1 (mod q)`, satisfies `k ≡ a (mod p)` and `k ≡ ±b (mod q)`.
@@ -24,16 +24,16 @@ theorem affine_numerator (A B C D s : ℝ) :
   ring
 
 /-- Theorem 13.1(4): the phase numerator of the boundary sector `(m, n)`. -/
-theorem sector_numerator (p q a m n : ℤ) (εμ ελ : ℝ) :
-    (m + εμ) * (-(p * q : ℝ)) - 1 * (n + ελ + a / 2) =
-      -((p * q : ℝ) * (m + εμ) + n + ελ + a / 2) := by
+theorem sector_numerator (p q a m n : ℤ) (εm εl : ℝ) :
+    (m + εm) * (-(p * q : ℝ)) - 1 * (n + εl + a / 2) =
+      -((p * q : ℝ) * (m + εm) + n + εl + a / 2) := by
   ring
 
 /-- **Theorem 13.1(4), silence criterion.** Some boundary sector is silent exactly when
-`pq ε_μ + ε_λ + a/2` is an integer. -/
-theorem silent_sector_iff (p q a : ℤ) (εμ ελ : ℝ) :
-    (∃ m n : ℤ, (m + εμ) * (-(p * q : ℝ)) - 1 * (n + ελ + a / 2) = 0) ↔
-      ∃ k : ℤ, (p * q : ℝ) * εμ + ελ + a / 2 = k := by
+`pq ε_m + ε_l + a/2` is an integer. -/
+theorem silent_sector_iff (p q a : ℤ) (εm εl : ℝ) :
+    (∃ m n : ℤ, (m + εm) * (-(p * q : ℝ)) - 1 * (n + εl + a / 2) = 0) ↔
+      ∃ k : ℤ, (p * q : ℝ) * εm + εl + a / 2 = k := by
   constructor
   · rintro ⟨m, n, h⟩
     refine ⟨-(p * q * m) - n, ?_⟩

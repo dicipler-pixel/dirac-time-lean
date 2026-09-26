@@ -33,7 +33,7 @@ theorem moving_frame_identity (ħ : ℝ) (R R' H : Matrix n n ℂ) (χ χ' ψ' :
     rw [hprod, mulVec_add, mulVec_mulVec, mulVec_mulVec, hU, one_mulVec]
   have h2 : (Complex.I * ħ) • (star R *ᵥ ψ') = (star R * H * R) *ᵥ χ := by
     rw [← mulVec_smul, hS, mulVec_mulVec, mulVec_mulVec]
-  rw [sub_mulVec, smul_mulVec_assoc, ← h2, h1, smul_add]
+  rw [sub_mulVec, smul_mulVec, ← h2, h1, smul_add]
   abel
 
 /-- **Common-clock form.** If the frame generator is `τ̇ H₀ + a I`, the frame state is
@@ -45,6 +45,6 @@ theorem common_clock (ħ τdot a : ℝ) (R R' H H₀ : Matrix n n ℂ) (χ χ' �
       (τdot : ℂ) • H₀ + (a : ℂ) • (1 : Matrix n n ℂ)) :
     (Complex.I * ħ) • χ' = (τdot : ℂ) • (H₀ *ᵥ χ) + (a : ℂ) • χ := by
   rw [moving_frame_identity ħ R R' H χ χ' ψ' hU hprod hS, hgen, add_mulVec,
-    smul_mulVec_assoc, smul_mulVec_assoc, one_mulVec]
+    smul_mulVec, smul_mulVec, one_mulVec]
 
 end DiracTime.MovingFrame
