@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below."
+title: "Universal Projector Geometry from Electrical Measurements: Lean proofs"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 1.0.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/dicipler-pixel/upg-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - projector geometry
+  - feedback
+  - block matrices
+references:
+  - type: article
+    title: "Universal Projector Geometry from Electrical Measurements"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.22045735"

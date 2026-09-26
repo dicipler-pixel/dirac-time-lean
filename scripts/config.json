@@ -1,0 +1,42 @@
+{
+  "modules": [
+    {
+      "module": "UPGFeedback",
+      "path": "UPGFeedback.lean"
+    },
+    {
+      "module": "UPGBlockFeedback",
+      "path": "UPGBlockFeedback.lean"
+    },
+    {
+      "module": "UPGProjectorMetric",
+      "path": "UPGProjectorMetric.lean"
+    },
+    {
+      "module": "UPGProjectorDynamics",
+      "path": "UPGProjectorDynamics.lean"
+    },
+    {
+      "module": "UPGResolventFeedback",
+      "path": "UPGResolventFeedback.lean"
+    },
+    {
+      "module": "UPGPositiveFeedback",
+      "path": "UPGPositiveFeedback.lean"
+    },
+    {
+      "module": "UPGInterfacePersistence",
+      "path": "UPGInterfacePersistence.lean"
+    },
+    {
+      "module": "UPGInterfaceSpectrum",
+      "path": "UPGInterfaceSpectrum.lean"
+    }
+  ],
+  "expected_theorems": 41,
+  "expected_false_controls": 1,
+  "root_imports": [
+    "UPGPositiveFeedback",
+    "UPGInterfaceSpectrum"
+  ]
+}
