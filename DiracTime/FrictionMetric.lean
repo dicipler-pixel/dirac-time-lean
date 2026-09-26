@@ -29,7 +29,6 @@ theorem pair_friction_eq_weighted_metric (c h2 pm pn Em En : ℝ) (hE : En ≠ E
       2 * c * (pm - pn) * (En - Em) * (h2 / (En - Em) ^ 2) := by
   have h : En - Em ≠ 0 := sub_ne_zero.mpr hE
   field_simp
-  ring
 
 /-- Gibbs weights decrease with energy, so every pair weight is nonnegative. -/
 theorem gibbs_pair_weight_nonneg (β Em En : ℝ) (hβ : 0 ≤ β) :
@@ -51,7 +50,6 @@ theorem two_level_population_gap (x : ℝ) :
   have h : Real.exp x + Real.exp (-x) ≠ 0 := by positivity
   rw [Real.tanh_eq_sinh_div_cosh, Real.sinh_eq, Real.cosh_eq]
   field_simp
-  ring
 
 /-- Zero temperature: a band, not a proportionality. -/
 theorem weighted_sum_band {ι : Type*} (s : Finset ι) (w g : ι → ℝ) (lo hi : ℝ)
