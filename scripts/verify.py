@@ -46,7 +46,7 @@ NAMESPACE_RE = re.compile(r"^namespace\s+(\S+)", re.M)
 MATH_FAILURE = re.compile(
     r"unsolved goals|proved that the proposition.*false|tactic '.*' failed|"
     r"linarith failed|failed to prove|decide failed|norm_num failed|type mismatch|"
-    r"simp made no progress",
+    r"made no progress",
     re.S | re.I)
 INFRA_FAILURE = re.compile(
     r"unknown (?:module|identifier|constant|namespace)|unexpected token|"
