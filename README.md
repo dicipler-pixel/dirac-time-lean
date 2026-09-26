@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-62_%2B_3_headline-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-80_%2B_3_headline-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22978631-blue)](https://doi.org/10.5281/zenodo.22978631)
@@ -54,9 +54,11 @@ $$
 | :--- | :--- | :--- | :-: |
 | §2.1–2.4, item T1 | Predictive quotient: equivalence, descent of the dynamics, Cayley–Hamilton closure, rank formula, minimality, closure of the present observation | [`PredictiveQuotient`](DiracTime/PredictiveQuotient.lean) | **proved** |
 | §3.1 | Structural memory filtration: a coarser record cannot create distinctions | [`MemoryFiltration`](DiracTime/MemoryFiltration.lean) | **proved** |
-| Theorem P1, item T2 | Projector tangents: tangent equation ⇔ both diagonal blocks vanish, tangents are off-diagonal, metric positivity, unitary invariance of `g` and `Ω`, metric–curvature inequality | [`ProjectorTangent`](DiracTime/ProjectorTangent.lean) | **proved** (block formulas of item 2 open) |
+| Theorem P1, item T2 | Projector tangents: tangent equation ⇔ both diagonal blocks vanish, tangents are off-diagonal, metric positivity, unitary invariance of `g` and `Ω`, metric–curvature inequality | [`ProjectorTangent`](DiracTime/ProjectorTangent.lean) | **proved** |
+| Theorem P1, item 2 | Block formulas: `g = Re Tr(XY†)`, `Ω = −2 Im Tr(XY†)`, `Q = Tr(XY†) = g − (i/2) Ω` | [`ProjectorBlocks`](DiracTime/ProjectorBlocks.lean) | **proved** |
 | Theorem P2 | Weak-value success-probability bound `p₀ |A_w|² ≤ ⟨i|A²|i⟩` | [`WeakValue`](DiracTime/WeakValue.lean) | **proved** |
 | Theorem P3, item T3 | Path-ledger descent: an endpoint potential exists ⇔ every loop is silent; positive reachability is not antisymmetric | [`PathLedger`](DiracTime/PathLedger.lean) | **proved** |
+| Corollaries P4.1–P4.3 | Common gap scaling `µⱼ − µₖ = τ̇ (Eⱼ − Eₖ)`; rate and shift unique for non-scalar `H₀`; rescaling `H ↦ sH` keeps every eigenvector but scales every gap | [`CommonClock`](DiracTime/CommonClock.lean) | **proved** |
 | Theorem P5 | Finite return: a difference returns to the observed sector at some step ⇔ within the first `dim V` steps | [`FiniteReturn`](DiracTime/FiniteReturn.lean) | **proved** (discrete-step form) |
 | Theorem P6, P6.1 | Entropy/correlation ledger `ΔS_S − Σ β_r Q_r = ΔI + Σ ΔD_r` and the integrated second law | [`EntropyLedger`](DiracTime/EntropyLedger.lean) | **proved** from the two stated operator facts |
 | §9.2 | Affine phase readout: the angular numerator `AD − BC` is constant | [`PhaseSilence`](DiracTime/PhaseSilence.lean) | **proved** |
@@ -75,7 +77,7 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 2. **Independent replay**: every module is re-checked by Lean's separate kernel checker.
 3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
    `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.
-4. **False controls**: eleven deliberately false statements must fail to compile, and fail
+4. **False controls**: thirteen deliberately false statements must fail to compile, and fail
    for a mathematical reason, not a typo. This shows the checker can say no.
 
 To check it yourself with Lean installed:

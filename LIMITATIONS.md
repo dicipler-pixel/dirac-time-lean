@@ -8,8 +8,8 @@ Formalization is evidence for the mathematics, not for the physical interpretati
 * **§2 predictive quotient (T1).** Finite-dimensional vector space over any field, linear
   dynamics, linear observation.
 * **Theorem P1 (T2).** Tangent characterization in any ring; positivity and unitary invariance
-  for complex matrices; the metric–curvature inequality in block variables. The identification
-  `g = Re Tr(XY†)`, `Ω = −2 Im Tr(XY†)` (item 2) is not formalized.
+  for complex matrices; the metric–curvature inequality in block variables; the block formulas of item 2 for the
+  splitting `Ran P ⊕ Ran Q` written as a sum of index types.
 * **Theorem P2.** Any complex inner-product space, symmetric observable, normalized postselection.
 * **Theorem P3 (T3).** Any admitted path system with additive, reversal-odd ledger on a
   connected configuration space; spectral flow is the case `A = ℤ` but spectral flow itself is
@@ -21,6 +21,8 @@ Formalization is evidence for the mathematics, not for the physical interpretati
   total entropy. Proving those facts in Lean (unitary invariance of von Neumann entropy, the
   logarithm of a Gibbs state, Klein's inequality) is future work; Physlib's quantum-information
   library currently has the entropies but not these two facts.
+* **Corollaries P4.1–P4.3.** Complex matrices; the eigenvector and gap statements, uniqueness
+  of rate and shift for a non-scalar reference generator, and the rescaling statement.
 * **§9.3 / T4.** The moving-frame identity at each instant, from the product rule; existence and
   uniqueness of solutions and the propagator form of Theorem P4 are not formalized.
 * **§11.4.** The exact amplitudes, populations and readout of the finite witness.
