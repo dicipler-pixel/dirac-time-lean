@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use these Lean proofs, please cite them as below."
+title: "The Dirac Time of the Gigantefermion: Lean proofs"
+authors:
+  - family-names: "Beasley"
+    given-names: "Jeromie"
+version: 0.1.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/dicipler-pixel/dirac-time-lean"
+keywords:
+  - Lean 4
+  - Mathlib
+  - formal verification
+  - predictive state
+  - observability
+  - Cayley-Hamilton
+references:
+  - type: article
+    title: "The Dirac Time of the Gigantefermion"
+    authors:
+      - family-names: "Beasley"
+        given-names: "Jeromie"
+    doi: "10.5281/zenodo.22978631"
