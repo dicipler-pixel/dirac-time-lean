@@ -43,8 +43,9 @@ Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
    `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.
 4. **False controls**: three deliberately false statements must fail to compile, for a
-   mathematical reason: a false later-transmission equality with an unsafe mean-before-
-   inversion inequality, a false memory law, and a false exclusion claim.
+   mathematical reason: a false later-transmission equality and an unsafe mean-before-inversion
+   inequality, equal futures from equal instantaneous readouts, and a positive same-spin pair
+   density at coincidence.
 
 ```bash
 lake exe cache get
