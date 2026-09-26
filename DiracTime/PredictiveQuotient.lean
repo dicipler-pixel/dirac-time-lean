@@ -105,7 +105,7 @@ theorem pow_eq_sum_lower [FiniteDimensional K V] (m : ℕ) :
     ∃ c : ℕ → K, L ^ m = ∑ i ∈ Finset.range (finrank K V), c i • L ^ i := by
   have hp : L.charpoly.Monic := L.charpoly_monic
   have hsplit : L ^ m = aeval L ((X ^ m : K[X]) %ₘ L.charpoly) := by
-    have h := modByMonic_add_div (X ^ m : K[X]) L.charpoly hp
+    have h := modByMonic_add_div (X ^ m : K[X]) L.charpoly
     calc L ^ m = aeval L (X ^ m : K[X]) := by rw [aeval_X_pow]
       _ = aeval L ((X ^ m : K[X]) %ₘ L.charpoly +
             L.charpoly * ((X ^ m : K[X]) /ₘ L.charpoly)) := by rw [h]
