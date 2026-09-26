@@ -44,7 +44,7 @@ jobs:
 
       - name: Build every module
         run: |
-          set -uo pipefail
+          set +e -uo pipefail
           lake build 2>&1 | tee build.log
           status=${PIPESTATUS[0]}
           if [ "$status" -ne 0 ]; then
