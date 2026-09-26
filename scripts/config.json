@@ -1,0 +1,60 @@
+{
+  "modules": [
+    {
+      "module": "GaugeCertificates",
+      "path": "GaugeCertificates.lean"
+    },
+    {
+      "module": "CrossTheorem",
+      "path": "CrossTheorem.lean"
+    },
+    {
+      "module": "MatrixResolvedBoundary",
+      "path": "MatrixResolvedBoundary.lean"
+    },
+    {
+      "module": "SchurCongruence",
+      "path": "SchurCongruence.lean"
+    },
+    {
+      "module": "ProjectorKernel",
+      "path": "ProjectorKernel.lean"
+    },
+    {
+      "module": "CouplingFeedback",
+      "path": "CouplingFeedback.lean"
+    },
+    {
+      "module": "ObservabilityKernel",
+      "path": "ObservabilityKernel.lean"
+    },
+    {
+      "module": "ProjectorDynamics",
+      "path": "ProjectorDynamics.lean"
+    },
+    {
+      "module": "TailGapTransfer",
+      "path": "TailGapTransfer.lean"
+    },
+    {
+      "module": "SchurFloorTransfer",
+      "path": "SchurFloorTransfer.lean"
+    },
+    {
+      "module": "NonuniformAllocationFloor",
+      "path": "NonuniformAllocationFloor.lean"
+    },
+    {
+      "module": "LongestYangMillsChain",
+      "path": "LongestYangMillsChain.lean"
+    }
+  ],
+  "expected_theorems": 78,
+  "expected_false_controls": 2,
+  "root_imports": [
+    "GaugeCertificates",
+    "LongestYangMillsChain",
+    "ProjectorKernel",
+    "SchurFloorTransfer"
+  ]
+}

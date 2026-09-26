@@ -1,0 +1,18 @@
+name = "yang-mills-lean"
+version = "1.0.0"
+defaultTargets = ["GaugeCertificates", "CrossTheorem"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.0"
+
+# Every module keeps its original name and bytes (see PROVENANCE.md).
+[[lean_lib]]
+name = "GaugeCertificates"
+
+[[lean_lib]]
+name = "CrossTheorem"
+roots = ["CrossTheorem", "MatrixResolvedBoundary", "SchurCongruence", "ProjectorKernel",
+  "CouplingFeedback", "ObservabilityKernel", "ProjectorDynamics", "TailGapTransfer",
+  "SchurFloorTransfer", "NonuniformAllocationFloor", "LongestYangMillsChain"]
