@@ -36,10 +36,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
-LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger"]
-EXPECTED_LIBRARY_THEOREMS = 62
+LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger", "ProjectorBlocks", "CommonClock"]
+EXPECTED_LIBRARY_THEOREMS = 80
 EXPECTED_HEADLINE_THEOREMS = 3
-EXPECTED_FALSE_CONTROLS = 11
+EXPECTED_FALSE_CONTROLS = 13
 THEOREM_RE = re.compile(
     r"^\s*(?:@\[[^\]]*\]\s*)?(?:private\s+|protected\s+)?theorem\s+([^\s:({\[]+)", re.M)
 NAMESPACE_RE = re.compile(r"^namespace\s+(\S+)", re.M)

@@ -11,3 +11,5 @@ import DiracTime.FrictionMetric
 import DiracTime.SectorReduction
 import DiracTime.EntropyLedger
 import DiracTime.Headline
+import DiracTime.ProjectorBlocks
+import DiracTime.CommonClock
