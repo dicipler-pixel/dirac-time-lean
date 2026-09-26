@@ -1,0 +1,75 @@
+<div align="center">
+
+# Light Keeps the Ledger — Lean proofs
+
+**Machine-checked finite algebra behind the paper: boundary elimination, the transition census, optical response as a reweighted metric, and the scope counterexamples that keep each statement honest.**
+
+[![Lean proof check](https://github.com/dicipler-pixel/light-ledger-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/light-ledger-lean/actions/workflows/build.yml)
+![Lean](https://img.shields.io/badge/Lean-v4.33.0-blue)
+![Theorems](https://img.shields.io/badge/theorems-95-2EA043)
+![sorry](https://img.shields.io/badge/sorry-0-2EA043)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22124938-blue)](https://doi.org/10.5281/zenodo.22124938)
+
+Jeromie Beasley
+
+</div>
+
+---
+
+## Start here
+
+| If you want to… | Open |
+| :--- | :--- |
+| Know exactly what is **not** proved | [`LIMITATIONS.md`](LIMITATIONS.md) |
+| Check where every file came from | [`PROVENANCE.md`](PROVENANCE.md) |
+| See the statements that must be rejected | [`FalseControls/`](FalseControls/) |
+
+## What the library contains
+
+The files keep their original module names and bytes, so their hashes match the verified
+sources exactly. Several file headers still carry the note "NOT COMPILED" from the day they
+were written, before they were first checked; the check below is the current evidence.
+
+| Subject | File | Theorems |
+| :--- | :--- | :-: |
+| **Algebraic bridges**: universal identities used by the manuscript | [`LightBridges/Algebra`](LightBridges/Algebra.lean) | 6 |
+| **Gram positivity**: every finite Gram form is positive semidefinite; purity is not a hypothesis | [`LightBridges/Gram`](LightBridges/Gram.lean) | 8 |
+| **Transition-window census**: a division-free lower bound on the weight of a transition window | [`LightBridges/Census`](LightBridges/Census.lean) | 9 |
+| **Coherence**: covariant squares, triangle holonomy, flatness as a composition law, the compression associator | [`LightBridges/Coherence`](LightBridges/Coherence.lean) | 5 |
+| **Boundary elimination**: the Schur lift and the matrix Smith transform, every inverse stated as an equation | [`LightBridges/Boundary`](LightBridges/Boundary.lean) | 9 |
+| **Ledger**: transpose symmetry and the exact finite determinant | [`LightBridges/Ledger`](LightBridges/Ledger.lean) | 7 |
+| **Scalar optics**: the Smith loss identity and real/imaginary response algebra | [`LightBridges/ScalarOptics`](LightBridges/ScalarOptics.lean) | 8 |
+| **Scope counterexamples**: oblique idempotents and the other exact examples that stop over-reaching claims | [`LightBridges/Examples`](LightBridges/Examples.lean) | 10 |
+| **Optical response as a weighted metric**: positive weights, matching null directions, lower and upper bounds, and the peel: reducing channel weights cannot raise the response, and a null direction persists | [`OpticalMetric`](OpticalMetric.lean) | 16 |
+| **Rigidity**: the regularized singular-value response and its positivity | [`Rigidity`](Rigidity.lean) | 8 |
+| **Completion steps**: equal metric with unequal static response, the unique lossless two-pole zero between the poles, the calibration obstruction, equal weighted-Gram kernels | [`LightCompletion`](LightCompletion.lean) | 9 |
+| | **Total** | **95** |
+
+## How it is checked
+
+Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
+
+1. **Build**: every module compiles against Lean v4.33.0 and Mathlib `v4.33.0`.
+2. **Independent replay**: every module is re-checked by Lean's separate kernel checker.
+3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
+   `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.
+4. **False controls**: four deliberately false statements must fail to compile, for a
+   mathematical reason: an oblique trace bound, a zero regulator, perfect absorption by a
+   sheet, and a tune-out that kills the metric.
+
+```bash
+lake exe cache get
+lake build
+python3 scripts/verify.py
+```
+
+## The paper
+
+*Light Keeps the Ledger*, Jeromie Beasley. DOI
+[10.5281/zenodo.22124938](https://doi.org/10.5281/zenodo.22124938).
+
+## Citation, licence and AI use
+
+Citation metadata is in [`CITATION.cff`](CITATION.cff). The Lean code and scripts are released
+under the [MIT License](LICENSE). How AI tools were used is stated in [`AI_USE.md`](AI_USE.md).

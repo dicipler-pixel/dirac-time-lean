@@ -1,0 +1,56 @@
+{
+  "modules": [
+    {
+      "module": "LightBridges.Algebra",
+      "path": "LightBridges/Algebra.lean"
+    },
+    {
+      "module": "LightBridges.Gram",
+      "path": "LightBridges/Gram.lean"
+    },
+    {
+      "module": "LightBridges.Census",
+      "path": "LightBridges/Census.lean"
+    },
+    {
+      "module": "LightBridges.Coherence",
+      "path": "LightBridges/Coherence.lean"
+    },
+    {
+      "module": "LightBridges.Boundary",
+      "path": "LightBridges/Boundary.lean"
+    },
+    {
+      "module": "LightBridges.Ledger",
+      "path": "LightBridges/Ledger.lean"
+    },
+    {
+      "module": "LightBridges.ScalarOptics",
+      "path": "LightBridges/ScalarOptics.lean"
+    },
+    {
+      "module": "LightBridges.Examples",
+      "path": "LightBridges/Examples.lean"
+    },
+    {
+      "module": "OpticalMetric",
+      "path": "OpticalMetric.lean"
+    },
+    {
+      "module": "Rigidity",
+      "path": "Rigidity.lean"
+    },
+    {
+      "module": "LightCompletion",
+      "path": "LightCompletion.lean"
+    }
+  ],
+  "expected_theorems": 95,
+  "expected_false_controls": 4,
+  "root_imports": [
+    "LightBridges",
+    "OpticalMetric",
+    "Rigidity",
+    "LightCompletion"
+  ]
+}

@@ -1,0 +1,22 @@
+name = "light-ledger-lean"
+version = "1.0.0"
+defaultTargets = ["LightBridges", "OpticalMetric", "Rigidity", "LightCompletion"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.33.0"
+
+# Every module keeps its original name and bytes, so its hash matches the verified source
+# (see PROVENANCE.md).
+[[lean_lib]]
+name = "LightBridges"
+
+[[lean_lib]]
+name = "OpticalMetric"
+
+[[lean_lib]]
+name = "Rigidity"
+
+[[lean_lib]]
+name = "LightCompletion"
