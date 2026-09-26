@@ -26,7 +26,7 @@ open Complex
 theorem normSq_sub_I_mul_exp (a b Φ : ℝ) :
     normSq ((a : ℂ) - I * (b : ℂ) * exp (Φ * I)) = a ^ 2 + b ^ 2 + 2 * a * b * Real.sin Φ := by
   rw [exp_mul_I, ← ofReal_cos, ← ofReal_sin, normSq_apply]
-  simp [mul_re, mul_im]
+  simp [mul_re, mul_im, cos_ofReal_re, sin_ofReal_re]
   linear_combination b ^ 2 * Real.sin_sq_add_cos_sq Φ
 
 /-- Arm-0 amplitude (times `√2`). -/
@@ -37,12 +37,12 @@ noncomputable def w₁ (θ Φ : ℝ) : ℂ := exp (Φ * I) * (Real.cos θ : ℂ)
 
 theorem normSq_w₀ (θ Φ : ℝ) : normSq (w₀ θ Φ) = 1 + Real.sin (2 * θ) * Real.sin Φ := by
   rw [w₀, Real.sin_two_mul, exp_mul_I, ← ofReal_cos, ← ofReal_sin, normSq_apply]
-  simp [mul_re, mul_im]
+  simp [mul_re, mul_im, cos_ofReal_re, sin_ofReal_re]
   linear_combination Real.sin_sq_add_cos_sq θ + Real.sin θ ^ 2 * Real.sin_sq_add_cos_sq Φ
 
 theorem normSq_w₁ (θ Φ : ℝ) : normSq (w₁ θ Φ) = 1 - Real.sin (2 * θ) * Real.sin Φ := by
   rw [w₁, Real.sin_two_mul, exp_mul_I, ← ofReal_cos, ← ofReal_sin, normSq_apply]
-  simp [mul_re, mul_im]
+  simp [mul_re, mul_im, cos_ofReal_re, sin_ofReal_re]
   linear_combination Real.sin_sq_add_cos_sq θ + Real.cos θ ^ 2 * Real.sin_sq_add_cos_sq Φ
 
 /-- The later readout: `⟨Z_P⟩(θ) = (|w₀|² − |w₁|²) / 2 = sin 2θ sin Φ`. -/
