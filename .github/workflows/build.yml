@@ -50,6 +50,14 @@ jobs:
           if [ "$status" -ne 0 ]; then
             echo "--- errors ---"
             grep -A 8 -E "error" build.log | head -200 || true
+            python3 - <<'PY'
+          lines = open("build.log").read().splitlines()
+          hits = [i for i, l in enumerate(lines) if "error:" in l]
+          for i in hits[:15]:
+              block = "\n".join(lines[i:i + 12])
+              flat = block.replace("%", "%25").replace("\r", "").replace("\n", "%0A")
+              print("::error title=lean build::" + flat[:4000])
+          PY
             exit "$status"
           fi
 
