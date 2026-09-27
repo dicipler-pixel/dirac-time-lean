@@ -6,7 +6,7 @@
 
 [![Lean proof check](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
-![Theorems](https://img.shields.io/badge/theorems-80_%2B_3_headline-2EA043)
+![Theorems](https://img.shields.io/badge/theorems-83_%2B_3_headline-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 [![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22978630-blue)](https://doi.org/10.5281/zenodo.22978630)
@@ -61,6 +61,7 @@ $$
 | Corollaries P4.1–P4.3 | Common gap scaling `µⱼ − µₖ = τ̇ (Eⱼ − Eₖ)`; rate and shift unique for non-scalar `H₀`; rescaling `H ↦ sH` keeps every eigenvector but scales every gap | [`CommonClock`](DiracTime/CommonClock.lean) | **proved** |
 | Theorem P5 | Finite return: a difference returns to the observed sector at some step ⇔ within the first `dim V` steps | [`FiniteReturn`](DiracTime/FiniteReturn.lean) | **proved** (discrete-step form) |
 | Theorem P6, P6.1 | Entropy/correlation ledger `ΔS_S − Σ β_r Q_r = ΔI + Σ ΔD_r` and the integrated second law | [`EntropyLedger`](DiracTime/EntropyLedger.lean) | **proved** from the two stated operator facts |
+| Theorem P6, unitarity | Von Neumann entropy is unitarily invariant, `S(UρU†) = S(ρ)`, proved with [Physlib](https://github.com/leanprover-community/physlib)'s quantum-information library; P6 restated with that hypothesis discharged | [`UnitaryEntropy`](DiracTime/UnitaryEntropy.lean) | **proved** |
 | §9.2 | Affine phase readout: the angular numerator `AD − BC` is constant | [`PhaseSilence`](DiracTime/PhaseSilence.lean) | **proved** |
 | §9.3, item T4 | Moving-frame identity `iħχ̇ = (R†HR − iħR†Ṙ)χ` and the common-clock form | [`MovingFrame`](DiracTime/MovingFrame.lean) | **proved** (instantaneous identity) |
 | §11.4 | Equal-endpoint witness: `|a − ib e^{iΦ}|² = a² + b² + 2ab sin Φ`, `⟨Z⟩ = sin 2θ sin Φ`, equal present populations, probe blind to `π − Φ` | [`EqualEndpointWitness`](DiracTime/EqualEndpointWitness.lean) | **proved** |
@@ -73,7 +74,7 @@ $$
 
 Every push runs [the proof check](.github/workflows/build.yml) on GitHub:
 
-1. **Build**: every module compiles against Lean v4.34.1 and Mathlib `v4.34.1`.
+1. **Build**: every module compiles against Lean v4.34.1, Mathlib `v4.34.1` and Physlib.
 2. **Independent replay**: every module is re-checked by Lean's separate kernel checker.
 3. **Axiom audit**: every named theorem depends only on `propext`, `Classical.choice` and
    `Quot.sound`. No `sorry`, no project axioms, no `native_decide`.

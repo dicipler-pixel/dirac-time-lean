@@ -13,6 +13,7 @@
 | `DiracTime/MovingFrame.lean` | Written for this repository from §9.3 and programme item T4 | same |
 | `DiracTime/ProjectorBlocks.lean` | Written for this repository from Theorem P1, item 2 | same |
 | `DiracTime/CommonClock.lean` | Written for this repository from Corollaries P4.1–P4.3 | same |
+| `DiracTime/UnitaryEntropy.lean` | Written for this repository from Theorem P6, using Physlib commit `35d1bb4` | same |
 | `DiracTime/EqualEndpointWitness.lean` | Written for this repository from §11.4 | same |
 | `DiracTime/FrictionMetric.lean` | Written for this repository from §12.6 | same |
 | `DiracTime/SectorReduction.lean` | Written for this repository from §15.5 | same |

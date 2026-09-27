@@ -16,11 +16,12 @@ Formalization is evidence for the mathematics, not for the physical interpretati
   not constructed.
 * **Theorem P5.** The discrete-step criterion `R Lⁿ Δ`; the continuous-time exponential form and
   the operator-space dimension bound are not formalized.
-* **Theorem P6 and P6.1.** Proved from two operator facts stated as hypotheses: the relative
-  entropy to a Gibbs reference equals `−S + βE + log Z`, and unitary evolution conserves the
-  total entropy. Proving those facts in Lean (unitary invariance of von Neumann entropy, the
-  logarithm of a Gibbs state, Klein's inequality) is future work; Physlib's quantum-information
-  library currently has the entropies but not these two facts.
+* **Theorem P6 and P6.1.** The unitarity fact is proved: von Neumann entropy is invariant
+  under `ρ ↦ UρU†` (`UnitaryEntropy`, built on Physlib), and P6 is restated with that
+  hypothesis discharged. The Gibbs-reference form of the relative entropy,
+  `D(ρ‖τ) = −S + βE + log Z`, is still a hypothesis; deriving it needs the logarithm of a
+  Gibbs state. Klein's inequality (nonnegativity of relative entropy) is used as a hypothesis in
+  P6.1.
 * **Corollaries P4.1–P4.3.** Complex matrices; the eigenvector and gap statements, uniqueness
   of rate and shift for a non-scalar reference generator, and the rescaling statement.
 * **§9.3 / T4.** The moving-frame identity at each instant, from the product rule; existence and
