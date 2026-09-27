@@ -9,7 +9,7 @@
 ![Theorems](https://img.shields.io/badge/theorems-80_%2B_3_headline-2EA043)
 ![sorry](https://img.shields.io/badge/sorry-0-2EA043)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22978631-blue)](https://doi.org/10.5281/zenodo.22978631)
+[![Paper DOI](https://img.shields.io/badge/paper-10.5281%2Fzenodo.22978630-blue)](https://doi.org/10.5281/zenodo.22978630)
 
 Jeromie Beasley
 
@@ -91,7 +91,7 @@ python3 scripts/verify.py
 ## The paper
 
 *The Dirac Time of the Gigantefermion*, Jeromie Beasley. DOI
-[10.5281/zenodo.22978631](https://doi.org/10.5281/zenodo.22978631).
+[10.5281/zenodo.22978630](https://doi.org/10.5281/zenodo.22978630).
 
 ## Citation, licence and AI use
 

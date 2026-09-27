@@ -1,6 +1,6 @@
 /-
 Star-projection tangent geometry (Theorem P1 and programme item T2 of "The Dirac Time of
-the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Proved here:
 * Tangent characterization. For an idempotent `P` with complement `Q = 1 - P`, a velocity

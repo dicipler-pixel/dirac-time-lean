@@ -1,6 +1,6 @@
 /-
 Affine phase readout and torus-knot silence (§9.2 and Theorem 13.1, parts 3–4, of
-"The Dirac Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+"The Dirac Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 For an affine readout `x = A + B s`, `y = C + D s` the angular numerator
 `x y' − y x' = A D − B C` does not depend on `s`: the phase lift is strictly monotone when it

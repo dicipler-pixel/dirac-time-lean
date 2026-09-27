@@ -2,7 +2,7 @@
 
 | File | Source | Paper |
 | :--- | :--- | :--- |
-| `DiracTime/PredictiveQuotient.lean` | Written for this repository from §2 (2.1–2.4) of the paper | v3.0.1, DOI 10.5281/zenodo.22978631 |
+| `DiracTime/PredictiveQuotient.lean` | Written for this repository from §2 (2.1–2.4) of the paper | v3.0.1, DOI 10.5281/zenodo.22978630 |
 | `DiracTime/MemoryFiltration.lean` | Written for this repository from §3.1 | same |
 | `DiracTime/ProjectorTangent.lean` | Written for this repository from Theorem P1 (Appendix D) | same |
 | `DiracTime/WeakValue.lean` | Written for this repository from Theorem P2 | same |

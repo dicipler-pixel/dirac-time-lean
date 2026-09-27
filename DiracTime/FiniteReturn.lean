@@ -1,6 +1,6 @@
 /-
 Finite retained-history return (the finite core of Theorem P5 of "The Dirac Time of the
-Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Two histories that differ by `Δ` become distinguishable through the observation `R` at
 some later step exactly when they do so within the first `d = dim V` steps: if the

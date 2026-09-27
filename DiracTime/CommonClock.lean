@@ -1,6 +1,6 @@
 /-
 The corollaries of the covariant common-clock theorem (Corollaries P4.1–P4.3 of "The Dirac
-Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Proved here, for complex matrices:
 * P4.1, common gap scaling: if the frame generator is `G = τ̇ H₀ + a I`, every eigenvector of

@@ -1,6 +1,6 @@
 /-
 Friction on projector rotations (§12.6 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 For a slowly driven nondegenerate spectrum in contact with a bath, the excess-work tensor
 has, for each level pair `m ≠ n`, the term `c_mn |Ḣ_mn|² (p_m − p_n)/(E_n − E_m)`, while the

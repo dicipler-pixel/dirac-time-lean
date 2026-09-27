@@ -1,6 +1,6 @@
 /-
 Finite entropy/correlation ledger (Theorem P6 and Corollary P6.1 of "The Dirac Time of the
-Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 A retained system `S` exchanges energy with reservoirs `r` (here any finite index set) with
 fixed Gibbs references `τ_r = e^{−β_r H_r}/Z_r`, and the whole evolves unitarily. With heat

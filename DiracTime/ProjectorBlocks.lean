@@ -1,6 +1,6 @@
 /-
 Block formulas for the projector metric and curvature (Theorem P1, item 2 of "The Dirac
-Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Time of the Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Split the space as `Ran P ⊕ Ran Q`, so that `P = [[1, 0], [0, 0]]` and a tangent at `P` is
 `V = [[0, X], [X†, 0]]`. With `g(V, W) = ½ Tr(V W)`, `Ω(V, W) = i Tr(P [V, W])` and

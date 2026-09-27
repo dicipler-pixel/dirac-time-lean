@@ -1,7 +1,7 @@
 /-
 The finite moving-frame identity behind the common-clock theorem (programme item T4 and
 §9.3 / Theorem P4 of "The Dirac Time of the Gigantefermion", Jeromie Beasley,
-DOI 10.5281/zenodo.22978631).
+DOI 10.5281/zenodo.22978630).
 
 Write the state in a unitary frame, `ψ = R χ`. If `iħ ψ̇ = H ψ` and `ψ̇ = Ṙ χ + R χ̇`
 (product rule), then the frame state obeys

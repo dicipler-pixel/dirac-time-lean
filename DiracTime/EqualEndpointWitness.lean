@@ -1,6 +1,6 @@
 /-
 The exact equal-endpoint witness (§11.4 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 A path qubit and a record qubit share one excitation; a gauge history writes its Wilson
 phase `Φ` onto the arm-1 branch. After a later exchange acting for a time with `θ = g t`,

@@ -1,6 +1,6 @@
 /-
 Sector reduction must be proved (§15.5 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 For a projector `P` and generator `H`, the retained sector evolves autonomously only if
 `(1 − P) H P = 0`; otherwise the omitted sector feeds back. The off-diagonal redistribution

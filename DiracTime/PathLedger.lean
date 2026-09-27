@@ -1,6 +1,6 @@
 /-
 Path-ledger descent (Theorem P3 and programme item T3 of "The Dirac Time of the
-Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Gigantefermion", Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Admitted paths between configurations carry a ledger in an abelian group `A` that adds
 under concatenation and changes sign under reversal (spectral flow is the case `A = ℤ`).

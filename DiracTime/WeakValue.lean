@@ -1,6 +1,6 @@
 /-
 Weak-value success-probability bound (Theorem P2 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 For a normalized postselected state `f`, a preselected state `i` with `⟨f|i⟩ ≠ 0` and a
 self-adjoint observable `A`, the weak value is `A_w = ⟨f|A|i⟩ / ⟨f|i⟩` and the

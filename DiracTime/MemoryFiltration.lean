@@ -1,6 +1,6 @@
 /-
 Structural memory filtration (§3.1 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Successive reductions `R₀ → R₁ → ⋯ → R_m` define nested equivalence relations. A coarser
 description cannot create a distinction the finer one did not possess: whatever the finer

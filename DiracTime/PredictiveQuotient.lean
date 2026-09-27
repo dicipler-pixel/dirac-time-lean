@@ -1,6 +1,6 @@
 /-
 The exact predictive quotient (Section 2 of "The Dirac Time of the Gigantefermion",
-Jeromie Beasley, DOI 10.5281/zenodo.22978631).
+Jeromie Beasley, DOI 10.5281/zenodo.22978630).
 
 Setting. `V` is a finite-dimensional vector space over a field `K`, `L : V → V` is a
 linear continuation map and `R : V → W` is the declared observation. Two present
