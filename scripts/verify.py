@@ -36,8 +36,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
-LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger", "ProjectorBlocks", "CommonClock", "UnitaryEntropy"]
-EXPECTED_LIBRARY_THEOREMS = 83
+LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger", "ProjectorBlocks", "CommonClock", "UnitaryEntropy", "ContinuousReturn"]
+EXPECTED_LIBRARY_THEOREMS = 86
 EXPECTED_HEADLINE_THEOREMS = 3
 EXPECTED_FALSE_CONTROLS = 13
 THEOREM_RE = re.compile(
