@@ -13,3 +13,4 @@ import DiracTime.EntropyLedger
 import DiracTime.Headline
 import DiracTime.ProjectorBlocks
 import DiracTime.CommonClock
+import DiracTime.UnitaryEntropy
