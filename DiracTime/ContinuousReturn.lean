@@ -37,9 +37,7 @@ theorem profile_hasDerivAt (R : V →L[ℝ] W) (L : V →L[ℝ] V) (Δ : V) (k :
   have h := (hasDerivAt_exp_smul_const' (𝕂 := ℝ) L t).const_mul (L ^ k)
   have h2 := (reading R Δ).hasFDerivAt.comp_hasDerivAt t h
   unfold profile
-  convert h2 using 1
-  rw [pow_succ, mul_assoc]
-  rfl
+  exact h2.congr_deriv (by rw [pow_succ, mul_assoc])
 
 /-- **Continuous-time return criterion.** The reading of `e^{tL} Δ` vanishes at every time
 exactly when every discrete step `R Lᵏ Δ` vanishes. -/
