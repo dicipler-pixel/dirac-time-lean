@@ -14,8 +14,9 @@ Formalization is evidence for the mathematics, not for the physical interpretati
 * **Theorem P3 (T3).** Any admitted path system with additive, reversal-odd ledger on a
   connected configuration space; spectral flow is the case `A = ℤ` but spectral flow itself is
   not constructed.
-* **Theorem P5.** The discrete-step criterion `R Lⁿ Δ`; the continuous-time exponential form and
-  the operator-space dimension bound are not formalized.
+* **Theorem P5.** The discrete-step criterion `R Lⁿ Δ` and its continuous-time form
+  (`ContinuousReturn`, for a bounded generator on a complete real normed space); the
+  operator-space dimension bound is not formalized.
 * **Theorem P6 and P6.1.** The unitarity fact is proved: von Neumann entropy is invariant
   under `ρ ↦ UρU†` (`UnitaryEntropy`, built on Physlib), and P6 is restated with that
   hypothesis discharged. The Gibbs-reference form of the relative entropy,
