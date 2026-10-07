@@ -57,7 +57,7 @@ $$
 | §3.1 | Structural memory filtration: a coarser record cannot create distinctions | [`MemoryFiltration`](DiracTime/MemoryFiltration.lean) | **proved** |
 | Theorem P1, item T2 | Projector tangents: tangent equation ⇔ both diagonal blocks vanish, tangents are off-diagonal, metric positivity, unitary invariance of `g` and `Ω`, metric–curvature inequality (in block variables) | [`ProjectorTangent`](DiracTime/ProjectorTangent.lean) | **proved** |
 | Theorem P1, item 2 | Block formulas: `g = Re Tr(XY†)`, `Ω = −2 Im Tr(XY†)`, `Q = Tr(XY†) = g − (i/2) Ω` | [`ProjectorBlocks`](DiracTime/ProjectorBlocks.lean) | **proved** |
-| Theorem P2 | Weak-value success-probability bound `p₀ |A_w|² ≤ ⟨i|A²|i⟩` | [`WeakValue`](DiracTime/WeakValue.lean) | **proved** |
+| Theorem P2 | Weak-value success-probability bound `p₀ \|A_w\|² ≤ ⟨i\|A²\|i⟩` | [`WeakValue`](DiracTime/WeakValue.lean) | **proved** |
 | Theorem P3, item T3 | Path-ledger descent: an endpoint potential exists ⇔ every loop is silent; positive reachability is not antisymmetric | [`PathLedger`](DiracTime/PathLedger.lean) | **proved** |
 | Corollaries P4.1–P4.3 | Common gap scaling `µⱼ − µₖ = τ̇ (Eⱼ − Eₖ)`; rate and shift unique for non-scalar `H₀`; rescaling `H ↦ sH` keeps every eigenvector but scales every gap | [`CommonClock`](DiracTime/CommonClock.lean) | **proved** |
 | Theorem P5 | Finite return: a difference returns to the observed sector at some step ⇔ within the first `dim V` steps | [`FiniteReturn`](DiracTime/FiniteReturn.lean) | **proved** |
@@ -66,7 +66,7 @@ $$
 | Theorem P6, unitarity | Von Neumann entropy is unitarily invariant, `S(UρU†) = S(ρ)`, proved with [Physlib](https://github.com/leanprover-community/physlib)'s quantum-information library; P6 restated with that hypothesis discharged (only the total entropy is a quantum-state entropy; the system and reservoir entropies remain real parameters) | [`UnitaryEntropy`](DiracTime/UnitaryEntropy.lean) | **proved** |
 | §9.2 | Affine phase readout: the angular numerator `AD − BC` is constant | [`PhaseSilence`](DiracTime/PhaseSilence.lean) | **proved** |
 | §9.3, item T4 | Moving-frame identity `iħχ̇ = (R†HR − iħR†Ṙ)χ` and the common-clock form | [`MovingFrame`](DiracTime/MovingFrame.lean) | **proved** (instantaneous identity) |
-| §11.4 | Equal-endpoint witness: `|a − ib e^{iΦ}|² = a² + b² + 2ab sin Φ`, `⟨Z⟩ = sin 2θ sin Φ`, equal present populations, probe blind to `π − Φ` | [`EqualEndpointWitness`](DiracTime/EqualEndpointWitness.lean) | **proved** |
+| §11.4 | Equal-endpoint witness: `\|a − ib e^{iΦ}\|² = a² + b² + 2ab sin Φ`, `⟨Z⟩ = sin 2θ sin Φ`, equal present populations, probe blind to `π − Φ` | [`EqualEndpointWitness`](DiracTime/EqualEndpointWitness.lean) | **proved** |
 | §12.6 | Friction on projector rotations: pair friction = reweighted intrinsic metric, Gibbs sign, two-level `tanh(β∆/2)`, zero-temperature band | [`FrictionMetric`](DiracTime/FrictionMetric.lean) | **proved** (pairwise formulas) |
 | Theorem 13.1(3–4) | Torus-knot end indices `k ≡ a (mod p)`, `k ≡ ±b (mod q)`; silent sector ⇔ `pq ε_μ + ε_λ + a/2 ∈ ℤ` | [`PhaseSilence`](DiracTime/PhaseSilence.lean) | **proved** |
 | §15.5 | Sector reduction: `(1−P)HP = 0` ⇔ `HP = PHP`; redistribution vanishes ⇔ `[H, P] = 0` | [`SectorReduction`](DiracTime/SectorReduction.lean) | **proved** |
