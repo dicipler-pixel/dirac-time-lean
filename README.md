@@ -2,7 +2,7 @@
 
 # The Dirac Time of the Gigantefermion — Lean proofs
 
-**Machine-checked mathematics behind the paper: every exact finite result it states, checked by the Lean kernel on every push.**
+**Machine-checked mathematics behind the paper: the results listed below, checked by the Lean kernel on every push. What is not formalized is listed in [`LIMITATIONS.md`](LIMITATIONS.md).**
 
 [![Lean proof check](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml/badge.svg)](https://github.com/dicipler-pixel/dirac-time-lean/actions/workflows/build.yml)
 ![Lean](https://img.shields.io/badge/Lean-v4.34.1-blue)
@@ -55,15 +55,15 @@ $$
 | :--- | :--- | :--- | :-: |
 | §2.1–2.4, item T1 | Predictive quotient: equivalence, descent of the dynamics, Cayley–Hamilton closure, rank formula, minimality, closure of the present observation | [`PredictiveQuotient`](DiracTime/PredictiveQuotient.lean) | **proved** |
 | §3.1 | Structural memory filtration: a coarser record cannot create distinctions | [`MemoryFiltration`](DiracTime/MemoryFiltration.lean) | **proved** |
-| Theorem P1, item T2 | Projector tangents: tangent equation ⇔ both diagonal blocks vanish, tangents are off-diagonal, metric positivity, unitary invariance of `g` and `Ω`, metric–curvature inequality | [`ProjectorTangent`](DiracTime/ProjectorTangent.lean) | **proved** |
+| Theorem P1, item T2 | Projector tangents: tangent equation ⇔ both diagonal blocks vanish, tangents are off-diagonal, metric positivity, unitary invariance of `g` and `Ω`, metric–curvature inequality (in block variables) | [`ProjectorTangent`](DiracTime/ProjectorTangent.lean) | **proved** |
 | Theorem P1, item 2 | Block formulas: `g = Re Tr(XY†)`, `Ω = −2 Im Tr(XY†)`, `Q = Tr(XY†) = g − (i/2) Ω` | [`ProjectorBlocks`](DiracTime/ProjectorBlocks.lean) | **proved** |
 | Theorem P2 | Weak-value success-probability bound `p₀ |A_w|² ≤ ⟨i|A²|i⟩` | [`WeakValue`](DiracTime/WeakValue.lean) | **proved** |
 | Theorem P3, item T3 | Path-ledger descent: an endpoint potential exists ⇔ every loop is silent; positive reachability is not antisymmetric | [`PathLedger`](DiracTime/PathLedger.lean) | **proved** |
 | Corollaries P4.1–P4.3 | Common gap scaling `µⱼ − µₖ = τ̇ (Eⱼ − Eₖ)`; rate and shift unique for non-scalar `H₀`; rescaling `H ↦ sH` keeps every eigenvector but scales every gap | [`CommonClock`](DiracTime/CommonClock.lean) | **proved** |
 | Theorem P5 | Finite return: a difference returns to the observed sector at some step ⇔ within the first `dim V` steps | [`FiniteReturn`](DiracTime/FiniteReturn.lean) | **proved** |
-| Theorem P5, continuous time | `R e^{tL} Δ = 0` for every `t` ⇔ `R Lᵏ Δ = 0` for every `k` | [`ContinuousReturn`](DiracTime/ContinuousReturn.lean) | **proved** |
-| Theorem P6, P6.1 | Entropy/correlation ledger `ΔS_S − Σ β_r Q_r = ΔI + Σ ΔD_r` and the integrated second law | [`EntropyLedger`](DiracTime/EntropyLedger.lean) | **proved** from the two stated operator facts |
-| Theorem P6, unitarity | Von Neumann entropy is unitarily invariant, `S(UρU†) = S(ρ)`, proved with [Physlib](https://github.com/leanprover-community/physlib)'s quantum-information library; P6 restated with that hypothesis discharged | [`UnitaryEntropy`](DiracTime/UnitaryEntropy.lean) | **proved** |
+| Theorem P5, continuous time | `R e^{tL} Δ = 0` for every real `t` (past and future) ⇔ `R Lᵏ Δ = 0` for every `k` | [`ContinuousReturn`](DiracTime/ContinuousReturn.lean) | **proved** |
+| Theorem P6, P6.1 | Entropy/correlation ledger `ΔS_S − Σ β_r Q_r = ΔI + Σ ΔD_r`, from the two stated operator facts; the integrated second law, from that identity plus nonnegativity of multi-information and of relative entropy (taken as hypotheses) | [`EntropyLedger`](DiracTime/EntropyLedger.lean) | **proved** under the stated hypotheses |
+| Theorem P6, unitarity | Von Neumann entropy is unitarily invariant, `S(UρU†) = S(ρ)`, proved with [Physlib](https://github.com/leanprover-community/physlib)'s quantum-information library; P6 restated with that hypothesis discharged (only the total entropy is a quantum-state entropy; the system and reservoir entropies remain real parameters) | [`UnitaryEntropy`](DiracTime/UnitaryEntropy.lean) | **proved** |
 | §9.2 | Affine phase readout: the angular numerator `AD − BC` is constant | [`PhaseSilence`](DiracTime/PhaseSilence.lean) | **proved** |
 | §9.3, item T4 | Moving-frame identity `iħχ̇ = (R†HR − iħR†Ṙ)χ` and the common-clock form | [`MovingFrame`](DiracTime/MovingFrame.lean) | **proved** (instantaneous identity) |
 | §11.4 | Equal-endpoint witness: `|a − ib e^{iΦ}|² = a² + b² + 2ab sin Φ`, `⟨Z⟩ = sin 2θ sin Φ`, equal present populations, probe blind to `π − Φ` | [`EqualEndpointWitness`](DiracTime/EqualEndpointWitness.lean) | **proved** |

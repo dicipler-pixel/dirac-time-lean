@@ -9,8 +9,9 @@ every time exactly when every discrete step `R Lᵏ Δ` vanishes:
 
 Forward: the `k`-th time derivative of `R Lᵏ e^{tL} Δ` at `t = 0` is `R Lᵏ Δ`. Backward: the
 exponential series. Together with `FiniteReturn` (the discrete condition needs only the first
-`dim V` steps), a hidden present distinction becomes future-readable in continuous time exactly
-when it does so within `dim V` discrete steps.
+`dim V` steps), a hidden present distinction becomes readable at some real time `t` (the
+statement quantifies over all real `t`, past and future) exactly when it does so within `dim V`
+discrete steps.
 -/
 import Mathlib
 

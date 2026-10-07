@@ -1,7 +1,7 @@
 /-
 Headline results in plain Mathlib terms: every statement below uses only Lean core and
 Mathlib notions, so no definition from this project is needed to read it. Each is proved
-by citing the library.
+by citing the lemmas of `PredictiveQuotient`.
 -/
 import DiracTime.PredictiveQuotient
 

@@ -15,19 +15,24 @@ Formalization is evidence for the mathematics, not for the physical interpretati
   connected configuration space; spectral flow is the case `A = ℤ` but spectral flow itself is
   not constructed.
 * **Theorem P5.** The discrete-step criterion `R Lⁿ Δ` and its continuous-time form
-  (`ContinuousReturn`, for a bounded generator on a complete real normed space); the
-  operator-space dimension bound is not formalized.
+  (`ContinuousReturn`, for a bounded generator on a complete real normed space, stated for
+  all real `t`, past and future, rather than only `t > 0`); the operator-space dimension bound
+  is not formalized.
 * **Theorem P6 and P6.1.** The unitarity fact is proved: von Neumann entropy is invariant
   under `ρ ↦ UρU†` (`UnitaryEntropy`, built on Physlib), and P6 is restated with that
-  hypothesis discharged. The Gibbs-reference form of the relative entropy,
-  `D(ρ‖τ) = −S + βE + log Z`, is still a hypothesis; deriving it needs the logarithm of a
-  Gibbs state. Klein's inequality (nonnegativity of relative entropy) is used as a hypothesis in
-  P6.1.
+  hypothesis discharged. In that restatement only the total entropy is the entropy of a
+  quantum state; the system and reservoir entropies, energies and relative entropies remain
+  real parameters (no tensor decomposition or partial trace is formalized). The Gibbs-reference
+  form of the relative entropy, `D(ρ‖τ) = −S + βE + log Z`, is still a hypothesis; deriving it
+  needs the logarithm of a Gibbs state. P6.1 takes the P6 identity (with zero initial
+  correlations and relative entropies), Klein's inequality (nonnegativity of relative entropy)
+  and nonnegativity of multi-information (subadditivity) as hypotheses.
 * **Corollaries P4.1–P4.3.** Complex matrices; the eigenvector and gap statements, uniqueness
   of rate and shift for a non-scalar reference generator, and the rescaling statement.
 * **§9.3 / T4.** The moving-frame identity at each instant, from the product rule; existence and
   uniqueness of solutions and the propagator form of Theorem P4 are not formalized.
-* **§11.4.** The exact amplitudes, populations and readout of the finite witness.
+* **§11.4.** The populations and readout of the finite witness, computed from the stated
+  amplitudes `w₀`, `w₁`; the amplitudes are definitions, not derived from the exchange evolution.
 * **§12.6.** The pairwise algebra, the Gibbs sign, the two-level gap and the zero-temperature
   band. The first-order slow-driving derivation of the pairwise formulas from the relaxation
   model is not formalized.

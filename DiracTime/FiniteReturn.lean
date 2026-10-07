@@ -8,7 +8,8 @@ difference has not returned to the observed sector by step `d - 1`, it never wil
 
 The paper states P5 for continuous time, `R e^{tL} Δ ≠ 0` for some `t > 0`, with the
 dimension of the operator space in place of `d`. This file proves the discrete-step
-statement that its proof rests on; the passage through the exponential is not formalized.
+statement that its proof rests on. The passage through the exponential is in
+`ContinuousReturn` (for all real `t`); the operator-space dimension bound is not formalized.
 -/
 import DiracTime.PredictiveQuotient
 

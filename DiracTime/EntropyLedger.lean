@@ -13,9 +13,10 @@ uses them:
 * Gibbs reference: `D(ρ_r ‖ τ_r) = −S(ρ_r) + β_r E(ρ_r) + log Z_r`, from
   `log τ_r = −β_r H_r − log Z_r` and `Tr ρ_r = 1`;
 * unitary evolution preserves the total entropy, `ΔS_total = 0`.
-Given those, the identity and the integrated second-law corollary are proved exactly.
-Deriving the two operator facts in Lean (unitary invariance of von Neumann entropy, the
-logarithm of a Gibbs state) is not done here.
+Given those, the identity is proved exactly; the integrated second-law corollary also takes
+nonnegativity of multi-information and of relative entropy as hypotheses. Unitary invariance
+of von Neumann entropy is proved in `UnitaryEntropy` (via Physlib); the logarithm of a Gibbs
+state is not formalized.
 -/
 import Mathlib
 
@@ -49,8 +50,9 @@ theorem entropy_correlation_identity (β logZ : ι → ℝ)
   ring
 
 /-- **Corollary P6.1.** Starting uncorrelated with every reservoir in its Gibbs state (so the
-initial multi-information and relative entropies vanish), and using that multi-information
-and relative entropy are nonnegative, the integrated entropy production is nonnegative. -/
+initial multi-information and relative entropies vanish), and assuming as hypotheses that
+multi-information and relative entropy are nonnegative, the integrated entropy production is
+nonnegative. -/
 theorem integrated_second_law (β : ι → ℝ) (dSS I₁ : ℝ) (Q D₁ : ι → ℝ)
     (hP6 : dSS - ∑ r ∈ s, β r * Q r = (I₁ - 0) + ∑ r ∈ s, (D₁ r - 0))
     (hI : 0 ≤ I₁) (hD : ∀ r ∈ s, 0 ≤ D₁ r) :

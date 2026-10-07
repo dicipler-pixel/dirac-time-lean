@@ -31,16 +31,16 @@ theorem Sᵥₙ_unitaryConj (ρ : MState d) (U : Matrix.unitaryGroup d ℂ) :
   show -⟪(ρ.M.conj U.val).log, ρ.M.conj U.val⟫ = -⟪ρ.M.log, ρ.M⟫
   rw [HermitianMat.log_conj_unitary, HermitianMat.inner_conj_unitary]
 
-/-- **Theorem P6 for a unitary step.** When the total state evolves as `ρ ↦ U ρ U†`, the
-entropy/correlation identity holds with the total entropies computed by Physlib; the
-unitarity hypothesis of `EntropyLedger` is no longer assumed but proved. -/
+/-- **Total entropy is conserved under a unitary step**: `S(U ρ U†) − S(ρ) = 0`. This is the
+unitarity hypothesis of `EntropyLedger`, discharged in the next theorem. -/
 theorem total_entropy_conserved (ρ : MState d) (U : Matrix.unitaryGroup d ℂ) :
     Sᵥₙ (unitaryConj ρ U) - Sᵥₙ ρ = 0 := by
   rw [Sᵥₙ_unitaryConj, sub_self]
 
 /-- **Theorem P6 with the unitarity hypothesis discharged.** The total state evolves as
 `ρ ↦ U ρ U†` and its entropy is Physlib's `Sᵥₙ`; the identity then needs only the Gibbs-reference
-form of the relative entropies. -/
+form of the relative entropies. The system and reservoir entropies, energies and relative
+entropies remain real parameters. -/
 theorem entropy_correlation_identity_unitary {ι : Type*} (s : Finset ι) (β logZ : ι → ℝ)
     (SS₀ SS₁ : ℝ) (Sr₀ Sr₁ Er₀ Er₁ Dr₀ Dr₁ : ι → ℝ) (ρ : MState d)
     (U : Matrix.unitaryGroup d ℂ)

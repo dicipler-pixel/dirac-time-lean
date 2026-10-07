@@ -18,7 +18,7 @@
 | `DiracTime/EqualEndpointWitness.lean` | Written for this repository from §11.4 | same |
 | `DiracTime/FrictionMetric.lean` | Written for this repository from §12.6 | same |
 | `DiracTime/SectorReduction.lean` | Written for this repository from §15.5 | same |
-| `DiracTime/Headline.lean` | Plain-Mathlib restatements, each proved by citing the library | same |
+| `DiracTime/Headline.lean` | Plain-Mathlib restatements, each proved by citing the `PredictiveQuotient` lemmas | same |
 | `FalseControls/*.lean` | Written for this repository: one small concrete counterexample per result, each of which must be rejected | same |
 
 Toolchain: Lean `v4.34.1`, Mathlib `v4.34.1` (the version Physlib uses, so later modules can

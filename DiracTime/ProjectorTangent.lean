@@ -14,8 +14,8 @@ Proved here:
 
 * Metric–curvature inequality in block variables (item 3), from Cauchy–Schwarz.
 
-Not proved here: the identification of `g` and `Ω` with the block inner product,
-`g = Re Tr(X Y†)`, `Ω = -2 Im Tr(X Y†)` (item 2 of Theorem P1).
+The identification of `g` and `Ω` with the block inner product, `g = Re Tr(X Y†)`,
+`Ω = -2 Im Tr(X Y†)` (item 2 of Theorem P1), is proved separately in `ProjectorBlocks`.
 -/
 import Mathlib
 
@@ -129,8 +129,9 @@ end Matrix
 Write the off-diagonal blocks of two tangents as vectors `x, y` of a complex inner-product
 space (the Frobenius inner product on blocks). The metric reads the real part of `⟪x, y⟫`
 and the curvature form twice its imaginary part, `|Ω| = 2 |Im ⟪x, y⟫|`. The inequality below
-is item 3 of Theorem P1 in those variables; identifying `g` and `Ω` with the block inner
-product (item 2) is not formalized here. -/
+is item 3 of Theorem P1 in those variables. Identifying `g` and `Ω` with the block inner
+product (item 2) is proved separately in `ProjectorBlocks`; the two are not combined into one
+statement about matrices. -/
 
 section CurvatureBound
 
