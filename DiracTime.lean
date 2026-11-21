@@ -15,3 +15,9 @@ import DiracTime.ProjectorBlocks
 import DiracTime.CommonClock
 import DiracTime.UnitaryEntropy
 import DiracTime.ContinuousReturn
+import DiracTime.CouplingGram
+import DiracTime.MemoryEngine
+import DiracTime.PeripheralLaw
+import DiracTime.ChiralSpectrum
+import DiracTime.PositiveReturn
+import DiracTime.BlockCurvature
