@@ -37,9 +37,17 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger", "ProjectorBlocks", "CommonClock", "UnitaryEntropy", "ContinuousReturn"]
+GAP_LIBRARY = ["CouplingGram", "MemoryEngine", "PeripheralLaw", "ChiralSpectrum", "PositiveReturn", "BlockCurvature", "ProjectorVelocity", "FadingRecord", "LyapunovDrop", "TwoLevelPath"]
 EXPECTED_LIBRARY_THEOREMS = 86
 EXPECTED_HEADLINE_THEOREMS = 3
 EXPECTED_FALSE_CONTROLS = 13
+ORIGINAL_FALSE_CONTROLS = {
+    "ClosureTooShort", "CurvatureSignFlipped", "DroppedFrameConnection",
+    "EntropyWithoutUnitarity", "LeakySector", "LoopWithoutSilence",
+    "NegativeTemperatureSign", "NotATangent", "OneStepSuffices",
+    "ProbeSeparatesSupplement", "ReadoutForgets", "ScalarGeneratorFixesRate",
+    "UnnormalizedWeakValue",
+}
 THEOREM_RE = re.compile(
     r"^\s*(?:@\[[^\]]*\]\s*)?(?:private\s+|protected\s+)?theorem\s+([^\s:({\[]+)", re.M)
 NAMESPACE_RE = re.compile(r"^namespace\s+(\S+)", re.M)
@@ -99,8 +107,22 @@ def main() -> int:
     headline_count = report["modules"]["DiracTime.Headline"]["theorems"]
     if library_count != EXPECTED_LIBRARY_THEOREMS or headline_count != EXPECTED_HEADLINE_THEOREMS:
         raise SystemExit(f"inventory changed: library {library_count}, headline {headline_count}")
+    gap_names: list[str] = []
+    for module in GAP_LIBRARY:
+        path = ROOT / "DiracTime" / f"{module}.lean"
+        found = theorems_in(path)
+        if not found:
+            raise SystemExit(f"no theorems found in DiracTime.{module}")
+        report["modules"][f"DiracTime.{module}"] = {
+            "file": str(path.relative_to(ROOT)),
+            "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            "theorems": len(found),
+        }
+        gap_names += found
+    names += gap_names
     report["library_theorems"] = library_count
     report["headline_theorems"] = headline_count
+    report["gap_theorems"] = len(gap_names)
 
     # Axiom audit.
     audit = OUT / "AxiomAudit.lean"
@@ -110,6 +132,7 @@ def main() -> int:
     proc = run(["lake", "env", "lean", str(audit.relative_to(ROOT))])
     log = proc.stdout + proc.stderr
     (OUT / "axioms.log").write_text(log)
+    (OUT / "axioms_full.log").write_text(log)
     if proc.returncode != 0:
         print(log)
         raise SystemExit("axiom audit file did not compile")
@@ -143,12 +166,17 @@ def main() -> int:
             print(text)
             raise SystemExit(f"false control failed for the wrong reason: {path.name}")
         controls[path.stem] = "rejected"
-    if len(controls) < EXPECTED_FALSE_CONTROLS:
-        raise SystemExit(f"expected {EXPECTED_FALSE_CONTROLS} false controls, found {len(controls)}")
+    if not ORIGINAL_FALSE_CONTROLS <= controls.keys():
+        missing = sorted(ORIGINAL_FALSE_CONTROLS - controls.keys())
+        raise SystemExit(f"original false controls missing: {missing}")
+    if len(ORIGINAL_FALSE_CONTROLS & controls.keys()) < EXPECTED_FALSE_CONTROLS:
+        raise SystemExit(f"expected {EXPECTED_FALSE_CONTROLS} original false controls")
     report["false_controls"] = controls
+    report["gap_false_controls"] = sorted(set(controls) - ORIGINAL_FALSE_CONTROLS)
 
     (OUT / "report.json").write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
-    print(f"OK: {library_count} library theorems + {headline_count} headline theorems, "
+    print(f"OK: {library_count} library theorems + {headline_count} headline theorems"
+          f" + {len(gap_names)} gap theorems, "
           f"axioms used: {report['axiom_union']}, {len(controls)} false controls rejected")
     return 0
 
