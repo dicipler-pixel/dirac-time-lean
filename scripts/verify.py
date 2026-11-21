@@ -37,7 +37,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 LIBRARY = ["PredictiveQuotient", "MemoryFiltration", "ProjectorTangent", "WeakValue", "PathLedger", "FiniteReturn", "EqualEndpointWitness", "PhaseSilence", "MovingFrame", "FrictionMetric", "SectorReduction", "EntropyLedger", "ProjectorBlocks", "CommonClock", "UnitaryEntropy", "ContinuousReturn"]
-GAP_LIBRARY = ["CouplingGram", "MemoryEngine", "PeripheralLaw", "ChiralSpectrum", "PositiveReturn", "BlockCurvature"]
+GAP_LIBRARY = ["CouplingGram", "MemoryEngine", "PeripheralLaw", "ChiralSpectrum", "PositiveReturn", "BlockCurvature", "ProjectorVelocity", "FadingRecord", "LyapunovDrop", "TwoLevelPath"]
 EXPECTED_LIBRARY_THEOREMS = 86
 EXPECTED_HEADLINE_THEOREMS = 3
 EXPECTED_FALSE_CONTROLS = 13
@@ -132,6 +132,7 @@ def main() -> int:
     proc = run(["lake", "env", "lean", str(audit.relative_to(ROOT))])
     log = proc.stdout + proc.stderr
     (OUT / "axioms.log").write_text(log)
+    (OUT / "axioms_full.log").write_text(log)
     if proc.returncode != 0:
         print(log)
         raise SystemExit("axiom audit file did not compile")
